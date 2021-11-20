@@ -24,7 +24,9 @@ app.post("/run", async (req, res) => {
     return res.json({ output });
 })
 // --------------------------------
-
+app.get("/", async (req, res) => {
+    res.status(200).json('Server is working');
+})
 app.listen(PORT, () => {
     console.log(`Server has started on port ${PORT}`)
 });
